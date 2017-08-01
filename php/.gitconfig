@@ -1,0 +1,13 @@
+[user]
+	email = wangkaili@66nao.com
+	name = wangkaili
+[core]
+	editor = vim
+	quotepath = false
+	autocrlf = input
+[color]
+	ui = true
+[alias]
+	lg = log --graph --date-order --pretty=format:'%C(yellow)%h%Creset -%C(bold red)%d%Creset %s %C(green)(%cn)%Creset %C(cyan)(%cr)%Creset' --abbrev-commit --date=relative
+	lgn = log --no-merges --graph --date-order --pretty=format:'%C(yellow)%h%Creset -%C(bold red)%d%Creset %s %C(green)(%cn)%Creset %C(cyan)(%cr)%Creset' --abbrev-commit --date=relative
+	ss = status -s
