@@ -18,16 +18,18 @@ services:
             - MYSQL_ROOT_PASSWORD=root
             - INIT_SHELL=init.sh
             - INIT_SQL=init.sql
+        networks:
+            - backend
 
     php-image:
         build: ./php
         container_name: php-container
-        links:
-            - "mysql-image:database-server"
         volumes_from:
             - code-resources
         extra_hosts:
             - "dockerhost:192.168.10.50"
+        networks:
+            - backend
 
     nginx-image:
         build: ./nginx
@@ -35,7 +37,13 @@ services:
         ports:
             - "20080:80"
             - "28080:8080"
-        links:
-            - "php-image:php-server"
         volumes_from:
             - code-resources
+        networks:
+            - frontend
+            - backend
+networks:
+  frontend:
+    driver: "bridge"
+  backend:
+    driver: "bridge"
