@@ -1,1 +1,8 @@
+# JetBrain 项目配置文件
+.idea/
+# compose 项目配置文件
 .env
+# nginx配置文件
+nginx/sites-enabled/
+# mysql 脚本文件
+mysql/sql/
