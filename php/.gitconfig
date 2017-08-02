@@ -1,6 +1,3 @@
-[user]
-	email = wangkaili@66nao.com
-	name = wangkaili
 [core]
 	editor = vim
 	quotepath = false
