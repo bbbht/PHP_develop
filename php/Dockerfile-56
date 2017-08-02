@@ -8,7 +8,7 @@ RUN apt-get update \
 
 # 添加配置文件
 ADD .gitconfig /root/.gitconfig
-ADD php.ini /usr/local/etc/php/conf.d/
+ADD php-56.ini /usr/local/etc/php/conf.d/
 ADD xdebug.ini /usr/local/etc/php/conf.d/
 
 # 安装扩展
